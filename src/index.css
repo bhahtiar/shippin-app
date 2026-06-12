@@ -1,0 +1,33 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --yellow: #F5E642;
+  --yellow-hover: #e8d930;
+  --black: #1A1A1A;
+  --grey-dark: #6B6B6B;
+  --grey-mid: #E8E8E8;
+  --grey-light: #F5F5F5;
+  --white: #FFFFFF;
+  --font-display: 'DM Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--black);
+}
