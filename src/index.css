@@ -1,19 +1,14 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import "tailwindcss";
 
-:root {
-  --yellow: #F5E642;
-  --yellow-hover: #e8d930;
-  --black: #1A1A1A;
-  --grey-dark: #6B6B6B;
-  --grey-mid: #E8E8E8;
-  --grey-light: #F5F5F5;
-  --white: #FFFFFF;
-  --font-display: 'DM Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
+@theme {
+  --color-brand-yellow: #f5e642;
+  --color-brand-yellow-hover: #e8d930;
+  --color-ink: #1a1a1a;
+  --color-muted: #6b6b6b;
+  --color-line: #e8e8e8;
+  --color-soft: #f5f5f5;
+  --font-display: "DM Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 html {
@@ -22,12 +17,42 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--white);
-  color: var(--black);
+  background: #fff;
+  color: #1a1a1a;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: var(--yellow);
-  color: var(--black);
+  background: #f5e642;
+  color: #1a1a1a;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply mb-4 inline-flex rounded-full bg-brand-yellow px-4 py-1.5 font-display text-sm font-bold text-ink;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2;
+  }
+
+  .heading-highlight {
+    @apply relative isolate inline-block;
+  }
+
+  .heading-highlight::before {
+    content: "";
+    position: absolute;
+    left: -0.08em;
+    right: -0.08em;
+    bottom: 0.08em;
+    z-index: -1;
+    height: 38%;
+    border-radius: 3px;
+    background: #f5e642;
+  }
 }

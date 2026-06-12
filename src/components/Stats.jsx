@@ -1,56 +1,27 @@
 import React from 'react'
+import { ClipboardCheck, Globe2, PackageCheck, Truck } from 'lucide-react'
 
-const stats = [
-  { value: '500+', label: 'Pengiriman Selesai' },
-  { value: '4', label: 'Negara Tujuan' },
-  { value: '48 Jam', label: 'Proses Dokumen' },
-  { value: '100%', label: 'Barang Aman Sampai' },
+const achievements = [
+  { icon: Globe2, title: 'Rute internasional aktif', label: 'Korea, China, Australia, Indonesia' },
+  { icon: ClipboardCheck, title: 'Bantuan dokumen', label: 'Invoice, packing list, dan customs' },
+  { icon: Truck, title: 'Door-to-door support', label: 'Pickup sampai pengantaran akhir' },
+  { icon: PackageCheck, title: 'Koordinasi cargo', label: 'Update proses dan estimasi pengiriman' },
 ]
 
 export default function Stats() {
   return (
-    <section style={{
-      background: '#1A1A1A',
-      padding: '56px 5vw',
-    }}>
-      <div style={{
-        maxWidth: 1200,
-        margin: '0 auto',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: 40,
-      }}>
-        {stats.map((s, i) => (
-          <div key={i} style={{
-            textAlign: 'center',
-            padding: '8px 16px',
-            borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
-          }}>
-            <div style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 900,
-              fontSize: 'clamp(32px, 4vw, 48px)',
-              color: '#F5E642',
-              letterSpacing: '-1px',
-              lineHeight: 1,
-              marginBottom: 8,
-            }}>{s.value}</div>
-            <div style={{
-              fontFamily: 'Inter, sans-serif',
-              fontSize: 13,
-              fontWeight: 500,
-              color: 'rgba(255,255,255,0.5)',
-              textTransform: 'uppercase',
-              letterSpacing: '0.8px',
-            }}>{s.label}</div>
+    <section className="bg-ink py-12">
+      <div className="section-shell grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {achievements.map(({ icon: Icon, title, label }) => (
+          <div key={title} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+            <div className="mb-4 grid size-10 place-items-center rounded-lg bg-brand-yellow text-ink">
+              <Icon size={20} />
+            </div>
+            <h3 className="mb-1.5 font-display text-[15px] font-bold text-white">{title}</h3>
+            <p className="text-xs leading-5 text-white/50">{label}</p>
           </div>
         ))}
       </div>
-      <style>{`
-        @media (max-width: 640px) {
-          section div[style*="border-right"] { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px !important; }
-        }
-      `}</style>
     </section>
   )
 }
