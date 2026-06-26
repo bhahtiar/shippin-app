@@ -1,5 +1,5 @@
 import React from 'react'
-import { Calculator, CheckCircle2, Clock3, MapPin, MessageCircle, Plane, ShieldCheck, Ship, Weight } from 'lucide-react'
+import { Calculator, CheckCircle2, Clock3, MapPin, MessageCircle, Plane, ShieldCheck, Ship, Sparkles } from 'lucide-react'
 
 const WA_NUMBER = '6281511233838'
 
@@ -9,15 +9,13 @@ const routeGroups = [
     lanes: [
       {
         name: 'Air Express',
-        price: 'IDR 300,000/kg',
-        minimum: '1 kg',
         leadTime: '3-5 hari',
+        note: 'Cocok untuk pengiriman cepat dan urgent',
       },
       {
         name: 'Air Regular',
-        price: 'IDR 190,000/kg',
-        minimum: '50 kg',
         leadTime: '5-12 hari',
+        note: 'Lebih hemat untuk cargo volume besar',
       },
     ],
   },
@@ -26,9 +24,8 @@ const routeGroups = [
     lanes: [
       {
         name: 'Air Express',
-        price: 'IDR 140,000/kg',
-        minimum: '10 kg',
         leadTime: '4-6 hari',
+        note: 'Estimasi disesuaikan kategori barang',
       },
     ],
   },
@@ -37,9 +34,8 @@ const routeGroups = [
     lanes: [
       {
         name: 'Air Express',
-        price: 'AUD 30/kg',
-        minimum: '1 kg',
         leadTime: '3-6 hari',
+        note: 'Pickup dan delivery dapat dikonsultasikan',
       },
     ],
   },
@@ -48,9 +44,8 @@ const routeGroups = [
     lanes: [
       {
         name: 'Air Express',
-        price: 'AUD 20/kg',
-        minimum: '1 kg',
         leadTime: '3-6 hari',
+        note: 'Cek rate sesuai lokasi dan berat cargo',
       },
     ],
   },
@@ -72,8 +67,8 @@ export default function Pricing() {
               Harga pengiriman internasional <span className="heading-highlight">per rute.</span>
             </h1>
             <p className="max-w-2xl text-[15px] leading-7 text-muted">
-              Pilih rute yang sesuai. Tim kami dapat membantu konfirmasi kategori barang, dokumen,
-              dan layanan terbaik sebelum pickup.
+              Pilih rute yang sesuai, lalu kirim detail cargo untuk mendapatkan estimasi rate terbaru.
+              Harga final mengikuti jenis barang, berat, dimensi, dan kebutuhan pengiriman.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 lg:justify-end">
@@ -178,18 +173,29 @@ function PricingCard({ lane }) {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h3 className="font-display text-base font-extrabold text-ink">{lane.name}</h3>
-          <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-[0.8px] text-muted/60">Estimasi rate</p>
+          <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-[0.8px] text-muted/60">Rate by request</p>
         </div>
         <div className="rounded-lg bg-brand-yellow px-3 py-2 text-right text-ink">
-          <div className="font-display text-base font-black leading-none">{lane.price}</div>
-          <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.5px] text-ink/60">Mulai dari</div>
+          <div className="font-display text-sm font-black leading-none">Rate khusus</div>
+          <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.5px] text-ink/60">Hubungi kami</div>
         </div>
       </div>
 
       <div className="mt-3 grid gap-2 sm:grid-cols-3">
-        <PriceMeta icon={Weight} label="Minimum berat" value={lane.minimum} />
         <PriceMeta icon={Clock3} label="Estimasi waktu" value={lane.leadTime} />
+        <PriceMeta icon={Sparkles} label="Pilihan rate" value="Cek sesuai cargo" />
         <PriceMeta icon={MapPin} label="Pengantaran" value="Gratis pengantaran*" />
+      </div>
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-soft pt-3">
+        <p className="text-xs leading-5 text-muted">{lane.note}</p>
+        <a
+          href={`https://wa.me/${WA_NUMBER}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 font-display text-xs font-bold text-ink transition hover:text-muted"
+        >
+          Minta rate <MessageCircle size={14} />
+        </a>
       </div>
     </div>
   )
