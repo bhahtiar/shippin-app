@@ -48,9 +48,11 @@ export default function Navbar() {
           onClick={(event) => handleNav(event, '#hero')}
           className="focus-ring flex items-center gap-2.5 rounded-lg no-underline"
         >
-          <span className="grid size-9 place-items-center rounded-lg bg-brand-yellow font-display text-sm font-black text-ink">
-            SE
-          </span>
+          <img
+            src="/logo.png"
+            alt="Shippin Express"
+            className="size-10 rounded-lg object-cover"
+          />
           <span className="font-display text-[17px] font-extrabold text-ink">
             Shippin <span className="font-normal">Express</span>
           </span>
