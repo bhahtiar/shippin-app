@@ -39,9 +39,11 @@ export default function Footer() {
         <div className="mb-8 grid gap-12 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="mb-4 flex items-center gap-2.5">
-              <span className="grid size-9 place-items-center rounded-lg bg-brand-yellow font-display text-sm font-black text-ink">
-                SE
-              </span>
+              <img
+                src="/logo.png"
+                alt="Shippin Express"
+                className="size-10 rounded-lg object-cover"
+              />
               <span className="font-display text-[17px] font-extrabold text-white">
                 Shippin <span className="font-normal">Express</span>
               </span>
