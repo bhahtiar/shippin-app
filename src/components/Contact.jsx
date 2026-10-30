@@ -5,12 +5,8 @@ const WA_NUMBER = '6281511233838'
 
 const services = [
   'Import Korea ke Indonesia',
-  'Export Indonesia ke Korea',
   'Import China ke Indonesia',
   'Import Australia ke Indonesia',
-  'Export Indonesia ke Australia',
-  'Freight Forwarding',
-  'Pengiriman Domestik',
 ]
 
 const fieldBase =
@@ -49,7 +45,7 @@ export default function Contact() {
 
     const text = `Halo Shippin Express!
 
-Saya ingin bertanya mengenai layanan kalian.
+Saya ingin bertanya mengenai layanan impor kalian.
 
 *Nama:* ${form.name}
 *Email:* ${form.email || '-'}
@@ -71,7 +67,7 @@ Mohon informasinya. Terima kasih!`
           <div>
             <div className="eyebrow">Hubungi Kami</div>
             <h2 className="mb-6 font-display text-4xl font-black leading-tight text-ink sm:text-[44px]">
-              Siap bantu pengiriman Anda <span className="heading-highlight">sekarang.</span>
+              Siap membantu kebutuhan impor Anda <span className="heading-highlight">sekarang.</span>
             </h2>
             <p className="mb-10 text-[15px] leading-8 text-muted">
               Isi form di samping dan kami akan langsung merespons via WhatsApp. Konsultasi gratis, tanpa biaya
@@ -80,8 +76,8 @@ Mohon informasinya. Terima kasih!`
 
             <div className="flex flex-col gap-5">
               <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 815-1123-3838" />
-              <ContactItem icon={Package} label="Layanan" value="Import, Export, Freight, Domestik" />
-              <ContactItem icon={Globe2} label="Rute" value="Korea, China, Australia, Indonesia" />
+              <ContactItem icon={Package} label="Layanan" value="Impor udara dan laut" />
+              <ContactItem icon={Globe2} label="Rute impor" value="Korea, China, Australia ke Indonesia" />
             </div>
 
             <a

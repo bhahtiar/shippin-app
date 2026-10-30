@@ -16,19 +16,19 @@ export default function About() {
           <div>
             <div className="eyebrow">Tentang Kami</div>
             <h2 className="mb-6 font-display text-4xl font-black leading-tight text-ink sm:text-5xl">
-              Pengalaman nyata
+              Pengalaman impor
               <br />
               di jalur yang{' '}
               <span className="heading-highlight">tepat.</span>
             </h2>
             <p className="mb-5 text-[15px] leading-8 text-muted">
-              Shippin Express hadir sebagai solusi logistik yang menghubungkan Indonesia dengan Korea Selatan,
-              China, dan Australia. Kami memahami kompleksitas regulasi bea cukai, kebutuhan dokumen ekspor-impor,
-              dan pentingnya ketepatan waktu dalam bisnis.
+              Shippin Express membantu menghubungkan bisnis di Indonesia dengan pemasok di Korea Selatan,
+              China, dan Australia. Kami memahami kebutuhan dokumen impor, proses kepabeanan, dan pentingnya
+              ketepatan waktu dalam bisnis.
             </p>
             <p className="text-[15px] leading-8 text-muted">
-              Dengan jaringan mitra logistik yang kuat di setiap negara tujuan, kami memastikan setiap pengiriman
-              berjalan lancar, transparan, dan sesuai regulasi yang berlaku.
+              Dengan jaringan mitra logistik di negara asal, kami membantu proses impor berjalan lancar,
+              transparan, dan sesuai regulasi yang berlaku.
             </p>
           </div>
 

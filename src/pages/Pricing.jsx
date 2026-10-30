@@ -20,32 +20,12 @@ const routeGroups = [
     ],
   },
   {
-    route: 'Indonesia ke Korea',
-    lanes: [
-      {
-        name: 'Air Express',
-        leadTime: '4-6 hari',
-        note: 'Estimasi disesuaikan kategori barang',
-      },
-    ],
-  },
-  {
     route: 'Australia ke Indonesia',
     lanes: [
       {
         name: 'Air Express',
         leadTime: '3-6 hari',
         note: 'Pickup dan delivery dapat dikonsultasikan',
-      },
-    ],
-  },
-  {
-    route: 'Indonesia ke Australia',
-    lanes: [
-      {
-        name: 'Air Express',
-        leadTime: '3-6 hari',
-        note: 'Cek rate sesuai lokasi dan berat cargo',
       },
     ],
   },
@@ -64,10 +44,10 @@ export default function Pricing() {
               Daftar Harga
             </div>
             <h1 className="mb-4 font-display text-3xl font-black leading-tight text-ink sm:text-4xl lg:text-5xl">
-              Harga pengiriman internasional <span className="heading-highlight">per rute.</span>
+              Harga layanan impor <span className="heading-highlight">per rute.</span>
             </h1>
             <p className="max-w-2xl text-[15px] leading-7 text-muted">
-              Pilih rute yang sesuai, lalu kirim detail cargo untuk mendapatkan estimasi rate terbaru.
+              Pilih negara asal barang, lalu kirim detail kargo untuk mendapatkan estimasi impor terbaru.
               Harga final mengikuti jenis barang, berat, dimensi, dan kebutuhan pengiriman.
             </p>
           </div>

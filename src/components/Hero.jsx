@@ -1,11 +1,10 @@
 import React from 'react'
-import { ArrowRight, Globe2, Plane, Ship, Truck } from 'lucide-react'
+import { ArrowRight, Plane, Ship } from 'lucide-react'
 
 const routes = [
   { icon: Plane, label: 'Korea ke Indonesia' },
   { icon: Ship, label: 'China ke Indonesia' },
   { icon: Plane, label: 'Australia ke Indonesia' },
-  { icon: Truck, label: 'Domestik' },
 ]
 
 export default function Hero() {
@@ -15,76 +14,45 @@ export default function Hero() {
   }
 
   return (
-    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden bg-[#fafafa] py-24 sm:py-28">
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[45%] overflow-hidden md:block">
-        {Array.from({ length: 12 }).map((_, index) => (
-          <div
-            key={index}
-            className="absolute left-0 right-0 h-px -skew-y-[8deg] bg-brand-yellow"
-            style={{ top: `${8 + index * 8}%`, opacity: 0.06 + index * 0.04 }}
-          />
-        ))}
-        <div className="absolute left-0 right-0 top-[30%] h-[3px] -skew-y-[8deg] bg-brand-yellow opacity-60" />
-        <div className="absolute left-0 right-0 top-[58%] h-[3px] -skew-y-[8deg] bg-brand-yellow opacity-30" />
-      </div>
-
-      <div className="pointer-events-none absolute right-[8%] top-[18%] hidden text-ink/10 lg:block">
-        {[Globe2, Ship, Plane, Truck].map((Icon, index) => (
-          <Icon
-            key={index}
-            className="absolute"
-            size={34}
-            style={{ top: `${index * 90}px`, left: `${Math.sin(index) * 60}px` }}
-          />
-        ))}
-      </div>
-
-      <div className="section-shell relative z-10">
-        <div className="max-w-2xl">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-brand-yellow px-4 py-1.5 font-display text-sm font-bold text-ink">
-            <Ship size={16} />
-            Import, Export, Logistics
+    <section id="hero" className="hero-layout overflow-hidden">
+      <div className="hero-grid grid md:grid-cols-[.95fr_1.05fr]">
+        <div className="relative flex items-center px-5 py-14 sm:px-8 md:py-20 lg:pl-[max(3rem,calc((100vw-80rem)/2+3rem))] lg:pr-10">
+          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[38%] bg-[repeating-linear-gradient(135deg,transparent_0_45px,rgba(34,107,130,.035)_45px_46px)] md:block" />
+          <div className="relative z-10 max-w-2xl">
+            <div className="eyebrow">Layanan Impor Terpercaya</div>
+            <h1 className="mb-6 max-w-[650px] font-display text-[42px] font-bold leading-[1.04] tracking-[-.045em] text-ink sm:text-[58px] lg:text-[68px]">
+              Bawa produk dunia <span className="heading-highlight">ke Indonesia.</span>
+            </h1>
+            <p className="max-w-xl text-base leading-7 text-[#536671] sm:text-lg sm:leading-8">
+              Shippin Express membantu bisnis Anda mengimpor barang dari Korea, China, dan Australia dengan dukungan freight, kepabeanan, dan pengiriman sampai tujuan.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#contact" onClick={(event) => handleNav(event, '#contact')} className="focus-ring inline-flex min-h-12 items-center gap-3 bg-ink px-6 font-display text-sm font-bold text-white transition hover:bg-[#205570]">
+                Konsultasi Impor <ArrowRight size={18} />
+              </a>
+              <a href="#services" onClick={(event) => handleNav(event, '#services')} className="focus-ring inline-flex min-h-12 items-center px-4 font-display text-sm font-semibold text-ink transition hover:bg-white/60">
+                Lihat layanan
+              </a>
+            </div>
+            <div className="mt-9 flex flex-wrap gap-2">
+              {routes.map(({ icon: Icon, label }) => (
+                <div key={label} className="inline-flex items-center gap-2 border border-[#14364a]/15 bg-white/55 px-3 py-2 text-xs font-semibold text-[#36515e]">
+                  <Icon size={15} className="text-[#226b82]" /> {label}
+                </div>
+              ))}
+            </div>
           </div>
-
-          <h1 className="mb-7 font-display text-[42px] font-black leading-[1.05] text-ink sm:text-[58px] lg:text-[76px]">
-            Kirim & Terima
-            <br />
-            Barang dari{' '}
-            <span className="relative inline-block">
-              <span className="absolute bottom-1 left-[-4px] right-[-4px] -z-10 h-[38%] rounded bg-brand-yellow" />
-              Seluruh Dunia
-            </span>
-          </h1>
-
-          <p className="mb-11 max-w-xl text-lg leading-8 text-muted">
-            Shippin Express melayani jasa import-export antara Indonesia, Korea, China, dan Australia,
-            termasuk freight forwarding dan pengiriman domestik dengan proses yang cepat dan terpercaya.
-          </p>
-
-          <div className="flex flex-wrap gap-3.5">
-            <a
-              href="#contact"
-              onClick={(event) => handleNav(event, '#contact')}
-              className="focus-ring inline-flex items-center gap-2 rounded-[10px] bg-ink px-8 py-4 font-display text-sm font-bold text-brand-yellow transition hover:-translate-y-0.5 hover:bg-[#333]"
-            >
-              Mulai Konsultasi <ArrowRight size={18} />
-            </a>
-            <a
-              href="#services"
-              onClick={(event) => handleNav(event, '#services')}
-              className="focus-ring rounded-[10px] border border-line px-8 py-4 font-display text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-ink"
-            >
-              Lihat Layanan
-            </a>
+        </div>
+        <div className="relative min-h-[330px] pl-4 md:min-h-full md:py-8 md:pr-0 lg:pl-7">
+          <div className="hero-photo h-full min-h-[530px] rounded-tl-[52px] md:rounded-tl-[72px]" role="img" aria-label="Kapal kontainer membawa barang impor" />
+          <div className="absolute left-8 right-7 top-5 flex justify-between text-[9px] font-bold tracking-[.14em] text-white sm:left-10 sm:right-10 md:top-12">
+            <span className="bg-[#102d3c]/35 px-3 py-2 backdrop-blur">SHIPPIN EXPRESS</span>
+            <span className="bg-[#102d3c]/40 px-3 py-2 backdrop-blur">INDONESIA IMPORT ROUTES</span>
           </div>
-
-          <div className="mt-12 flex flex-wrap gap-2.5">
-            {routes.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 rounded-lg border border-line bg-white px-3.5 py-2 text-sm font-medium text-ink">
-                <Icon size={16} className="text-muted" />
-                <span>{label}</span>
-              </div>
-            ))}
+          <div className="hero-photo-card absolute bottom-7 left-0 flex min-w-[260px] items-center gap-3 bg-brand-yellow px-4 py-3.5 text-ink sm:bottom-14 sm:min-w-[310px] sm:px-5">
+            <span className="grid size-10 place-items-center bg-ink font-display text-xs font-extrabold text-white">SE</span>
+            <span className="flex flex-1 flex-col gap-1"><b className="font-display text-xs">IMPOR TANPA RIBET</b><small className="text-[10px] font-semibold text-[#40545a]">Korea · China · Australia</small></span>
+            <ArrowRight size={18} />
           </div>
         </div>
       </div>

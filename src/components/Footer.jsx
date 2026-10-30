@@ -11,11 +11,9 @@ const navLinks = [
 
 const services = [
   'Import Korea',
-  'Export ke Korea',
   'Import China',
   'Import Australia',
-  'Freight Forwarding',
-  'Domestik',
+  'Air & ocean freight',
 ]
 
 const routes = ['ID', 'KR', 'CN', 'AU']
@@ -49,7 +47,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="max-w-64 text-sm leading-7 text-white/45">
-              Jasa import, export, dan logistics terpercaya. Menghubungkan Indonesia ke dunia.
+              Mitra impor terpercaya dari Korea, China, dan Australia ke Indonesia.
             </p>
           </div>
 
