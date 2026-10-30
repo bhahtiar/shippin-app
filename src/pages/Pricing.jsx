@@ -53,7 +53,7 @@ export default function Pricing() {
             href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Halo Shippin Express, saya ingin minta estimasi biaya impor.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="focus-ring inline-flex min-h-12 w-fit items-center gap-2 rounded-full bg-ink px-6 font-display text-sm font-extrabold text-brand-yellow shadow-md shadow-ink/10 transition hover:-translate-y-0.5 hover:bg-[#20536a]"
+            className="focus-ring action-dark inline-flex min-h-12 w-fit items-center gap-2 rounded-full px-6 font-display text-sm font-extrabold shadow-md shadow-ink/10 transition hover:-translate-y-0.5"
           >
             Minta estimasi harga <MessageCircle size={17} />
           </a>
@@ -102,7 +102,7 @@ export default function Pricing() {
                 </div>
                 <div className="flex items-center justify-between gap-3 border-t border-[#eaf1f3] px-5 py-3.5 sm:px-6">
                   <span className="text-[11px] leading-5 text-muted">Tarif final mengikuti detail kargo.</span>
-                  <a href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer" className="focus-ring inline-flex shrink-0 items-center gap-1.5 rounded-full bg-[#e2f6f2] px-4 py-2 font-display text-xs font-extrabold text-[#147f78] transition hover:bg-[#c8eee7]">Tanya rute <ArrowRight size={14} /></a>
+                  <a href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer" className="focus-ring action-mint inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2 font-display text-xs font-extrabold transition">Tanya rute <ArrowRight size={14} /></a>
                 </div>
               </article>
             )
@@ -113,7 +113,7 @@ export default function Pricing() {
           <div className="rounded-[26px] bg-[#153044] p-5 text-white sm:p-6">
             <div className="mb-4 flex items-center gap-2 text-brand-yellow"><MessageCircle size={18} /><h3 className="font-display text-base font-extrabold text-white">Biar kami hitung lebih akurat</h3></div>
             <p className="text-xs leading-6 text-white/65">Siapkan nama atau foto barang, kota asal, jumlah paket, berat dan ukuran, serta kode pos tujuan.</p>
-            <a href={contactHref} className="focus-ring mt-4 inline-flex items-center gap-2 rounded-full bg-brand-yellow px-4 py-2.5 font-display text-xs font-extrabold text-ink transition hover:bg-brand-yellow-hover">Kirim detail kargo <ArrowRight size={14} /></a>
+            <a href={contactHref} className="focus-ring action-yellow mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2.5 font-display text-xs font-extrabold transition">Kirim detail kargo <ArrowRight size={14} /></a>
           </div>
           <div className="grid gap-3 rounded-[26px] border border-[#dce8ed] bg-white p-5 text-xs leading-6 text-muted sm:grid-cols-2 sm:p-6">
             <div className="flex gap-3"><Calculator size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Berat volumetrik:</b> tarif dihitung dari berat aktual atau volumetrik, mana yang lebih besar. Rumus umum udara: panjang × lebar × tinggi (cm) ÷ 6.000.</p></div>

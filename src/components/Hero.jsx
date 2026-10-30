@@ -26,10 +26,10 @@ export default function Hero() {
             Mau belanja atau kulakan dari luar negeri? Kami bantu perjalanan barangmu dari Korea, China, Australia, dan Singapore sampai depan pintu.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#contact" onClick={(event) => handleNav(event, '#contact')} className="focus-ring inline-flex min-h-12 items-center gap-3 rounded-full bg-[#153044] px-6 font-display text-sm font-bold text-white shadow-lg shadow-[#153044]/15 transition hover:-translate-y-0.5 hover:bg-[#20536a]">
+            <a href="#contact" onClick={(event) => handleNav(event, '#contact')} className="focus-ring action-dark inline-flex min-h-12 items-center gap-3 rounded-full px-6 font-display text-sm font-bold shadow-lg shadow-[#153044]/15 transition hover:-translate-y-0.5">
               Yuk, konsultasi <ArrowRight size={18} />
             </a>
-            <a href="#services" onClick={(event) => handleNav(event, '#services')} className="focus-ring inline-flex min-h-12 items-center rounded-full border border-[#c9dce3] bg-white/75 px-6 font-display text-sm font-bold text-ink transition hover:bg-white">
+            <a href="#services" onClick={(event) => handleNav(event, '#services')} className="focus-ring action-outline inline-flex min-h-12 items-center rounded-full px-6 font-display text-sm font-bold transition">
               Kenalan dengan rute kami
             </a>
           </div>

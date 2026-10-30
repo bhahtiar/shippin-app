@@ -37,6 +37,14 @@ button, input, textarea, select { font: inherit; }
 .floating-chip:nth-child(2) { animation-delay: -1.2s; }
 .import-card { transition: transform .2s ease, box-shadow .2s ease; }
 .import-card:hover { transform: translateY(-5px) rotate(-.35deg); box-shadow: 0 18px 40px rgba(21,48,68,.1); }
+.action-dark { background-color: #153044; border: 1px solid #153044; color: #fff; }
+.action-dark:hover { background-color: #20536a; border-color: #20536a; color: #fff; }
+.action-outline { background-color: #fff; border: 1px solid #c9dce3; color: #153044; }
+.action-outline:hover { background-color: #edf8f7; border-color: #78c8bf; color: #153044; }
+.action-yellow { background-color: #ffd166; border: 1px solid #ffd166; color: #153044; }
+.action-yellow:hover { background-color: #ffbf45; border-color: #ffbf45; color: #153044; }
+.action-mint { background-color: #e2f6f2; border: 1px solid #c8eee7; color: #147f78; }
+.action-mint:hover { background-color: #c8eee7; border-color: #a9ddd4; color: #115d58; }
 @keyframes bob { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-7px) rotate(1deg); } }
 
 @media (max-width: 767px) {
