@@ -1,4 +1,5 @@
 import React from 'react'
+import PageSEO from '../components/PageSEO.jsx'
 import { ArrowRight, Calculator, CheckCircle2, Clock3, MapPin, MessageCircle, Plane, ShieldCheck, Ship } from 'lucide-react'
 
 const WA_NUMBER = '6281511233838'
@@ -32,11 +33,19 @@ const routeGroups = [
   },
 ]
 
-export default function Pricing() {
-  const contactHref = window.location.pathname === '/' ? '#contact' : '/#contact'
-  const Title = window.location.pathname === '/pricing' ? 'h1' : 'h2'
+export default function Pricing({ pathname }) {
+  const currentPath = pathname || (typeof window !== 'undefined' ? window.location.pathname : '/')
+  const isStandalone = currentPath.replace(/\/+$/, '') === '/pricing'
+  const contactHref = isStandalone ? '/#contact' : '#contact'
+  const Title = isStandalone ? 'h1' : 'h2'
+  const pageTitle = 'Harga Jasa Import ke Indonesia | Shippin Express'
+  const pageDescription = 'Opsi cargo dan estimasi jasa import dari Korea, China, Australia, dan Singapore ke Indonesia. Minta rate berdasarkan detail kargo.'
+  const canonicalUrl = 'https://shippinexpress.com/pricing/'
+  const pageSchema = { '@context': 'https://schema.org', '@type': 'WebPage', name: pageTitle, description: pageDescription, url: canonicalUrl, about: { '@id': 'https://shippinexpress.com/#organization' } }
 
   return (
+    <>
+      {isStandalone && <PageSEO title={pageTitle} description={pageDescription} canonicalUrl={canonicalUrl} structuredData={pageSchema} />}
     <section id="pricing" className="scroll-mt-20 bg-[#f5fbfc] py-20 sm:py-24">
       <div className="section-shell">
         <div className="mb-9 flex flex-col gap-6 lg:mb-11 lg:flex-row lg:items-end lg:justify-between">
@@ -122,6 +131,7 @@ export default function Pricing() {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

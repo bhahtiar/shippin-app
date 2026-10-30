@@ -1,6 +1,6 @@
 # Shippin Express — Website
 
-Website company profile jasa import, export, dan logistics.
+Website company profile untuk layanan impor internasional.
 
 ## Tech Stack
 - React 18 + Vite
