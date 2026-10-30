@@ -29,13 +29,23 @@ const routeGroups = [
       },
     ],
   },
+  {
+    route: 'Singapore ke Indonesia',
+    lanes: [
+      {
+        name: 'Air Express',
+        leadTime: 'By request',
+        note: 'Konfirmasi estimasi sesuai jenis barang dan layanan yang dipilih',
+      },
+    ],
+  },
 ]
 
 export default function Pricing() {
   const contactHref = window.location.pathname === '/' ? '#contact' : '/#contact'
 
   return (
-    <section id="pricing" className="scroll-mt-20 bg-[#fafafa] py-20">
+    <section id="pricing" className="scroll-mt-20 bg-[#f5fbfc] py-20">
       <div className="section-shell">
         <div className="mb-8 grid gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-3xl">
@@ -56,13 +66,13 @@ export default function Pricing() {
               href={`https://wa.me/${WA_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="focus-ring inline-flex items-center gap-2 rounded-[10px] bg-ink px-5 py-3 font-display text-sm font-bold text-brand-yellow transition hover:-translate-y-0.5 hover:bg-[#333]"
+              className="focus-ring inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 font-display text-sm font-bold text-brand-yellow transition hover:-translate-y-0.5 hover:bg-[#20536a]"
             >
               <MessageCircle size={18} /> Tanya Harga via WhatsApp
             </a>
             <a
               href={contactHref}
-              className="focus-ring inline-flex items-center gap-2 rounded-[10px] border border-line bg-white px-5 py-3 font-display text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-ink"
+              className="focus-ring inline-flex items-center gap-2 rounded-full border border-line bg-white px-5 py-3 font-display text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:border-ink"
             >
               Kirim Detail Kargo
             </a>
@@ -70,17 +80,17 @@ export default function Pricing() {
         </div>
 
         <div className="mb-4 grid gap-2 md:grid-cols-3">
-          <TrustPill icon={CheckCircle2} text="Rute aktif Korea, China, Australia" />
+          <TrustPill icon={CheckCircle2} text="Rute aktif Korea, China, Australia, Singapore" />
           <TrustPill icon={ShieldCheck} text="Bantuan dokumen dan customs" />
           <TrustPill icon={Clock3} text="Estimasi jelas sebelum pengiriman" />
         </div>
 
         <div className="grid gap-4 lg:grid-cols-2">
           {routeGroups.map((group) => (
-            <article key={group.route} className="overflow-hidden rounded-xl border border-line bg-white shadow-sm">
+            <article key={group.route} className="overflow-hidden rounded-[26px] border border-line bg-white shadow-sm">
               <div className="border-b border-line bg-ink px-4 py-3 text-white sm:px-5">
                 <div className="flex items-center gap-3">
-                  <span className="grid size-9 place-items-center rounded-lg bg-brand-yellow text-ink">
+                    <span className="grid size-9 place-items-center rounded-2xl bg-brand-yellow text-ink">
                     <Plane size={18} />
                   </span>
                   <div>

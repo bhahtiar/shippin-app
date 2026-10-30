@@ -23,7 +23,7 @@ export default function About() {
             </h2>
             <p className="mb-5 text-[15px] leading-8 text-muted">
               Shippin Express membantu menghubungkan bisnis di Indonesia dengan pemasok di Korea Selatan,
-              China, dan Australia. Kami memahami kebutuhan dokumen impor, proses kepabeanan, dan pentingnya
+              China, Australia, dan Singapore. Kami memahami kebutuhan dokumen impor, proses kepabeanan, dan pentingnya
               ketepatan waktu dalam bisnis.
             </p>
             <p className="text-[15px] leading-8 text-muted">
@@ -34,8 +34,8 @@ export default function About() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             {values.map(({ icon: Icon, title, desc }) => (
-              <article key={title} className="rounded-xl bg-soft p-6">
-                <div className="mb-3 grid size-11 place-items-center rounded-lg bg-brand-yellow text-ink">
+              <article key={title} className="rounded-[26px] bg-soft p-6">
+                <div className="mb-3 grid size-11 place-items-center rounded-2xl bg-brand-yellow text-ink">
                   <Icon size={22} />
                 </div>
                 <h3 className="mb-2 font-display text-[15px] font-bold text-ink">{title}</h3>

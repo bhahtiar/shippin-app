@@ -1,10 +1,11 @@
 import React from 'react'
-import { ArrowRight, Plane, Ship } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Box, Plane, Sparkles } from 'lucide-react'
 
 const routes = [
-  { icon: Plane, label: 'Korea ke Indonesia' },
-  { icon: Ship, label: 'China ke Indonesia' },
-  { icon: Plane, label: 'Australia ke Indonesia' },
+  { flag: '🇰🇷', label: 'Korea' },
+  { flag: '🇨🇳', label: 'China' },
+  { flag: '🇦🇺', label: 'Australia' },
+  { flag: '🇸🇬', label: 'Singapore' },
 ]
 
 export default function Hero() {
@@ -15,44 +16,50 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero-layout overflow-hidden">
-      <div className="hero-grid grid md:grid-cols-[.95fr_1.05fr]">
-        <div className="relative flex items-center px-5 py-14 sm:px-8 md:py-20 lg:pl-[max(3rem,calc((100vw-80rem)/2+3rem))] lg:pr-10">
-          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[38%] bg-[repeating-linear-gradient(135deg,transparent_0_45px,rgba(34,107,130,.035)_45px_46px)] md:block" />
-          <div className="relative z-10 max-w-2xl">
-            <div className="eyebrow">Layanan Impor Terpercaya</div>
-            <h1 className="mb-6 max-w-[650px] font-display text-[42px] font-bold leading-[1.04] tracking-[-.045em] text-ink sm:text-[58px] lg:text-[68px]">
-              Bawa produk dunia <span className="heading-highlight">ke Indonesia.</span>
-            </h1>
-            <p className="max-w-xl text-base leading-7 text-[#536671] sm:text-lg sm:leading-8">
-              Shippin Express membantu bisnis Anda mengimpor barang dari Korea, China, dan Australia dengan dukungan freight, kepabeanan, dan pengiriman sampai tujuan.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact" onClick={(event) => handleNav(event, '#contact')} className="focus-ring inline-flex min-h-12 items-center gap-3 bg-ink px-6 font-display text-sm font-bold text-white transition hover:bg-[#205570]">
-                Konsultasi Impor <ArrowRight size={18} />
-              </a>
-              <a href="#services" onClick={(event) => handleNav(event, '#services')} className="focus-ring inline-flex min-h-12 items-center px-4 font-display text-sm font-semibold text-ink transition hover:bg-white/60">
-                Lihat layanan
-              </a>
-            </div>
-            <div className="mt-9 flex flex-wrap gap-2">
-              {routes.map(({ icon: Icon, label }) => (
-                <div key={label} className="inline-flex items-center gap-2 border border-[#14364a]/15 bg-white/55 px-3 py-2 text-xs font-semibold text-[#36515e]">
-                  <Icon size={15} className="text-[#226b82]" /> {label}
-                </div>
-              ))}
-            </div>
+      <div className="hero-grid section-shell grid items-center gap-9 py-12 md:grid-cols-[1.05fr_.95fr] md:gap-8 md:py-16">
+        <div className="relative z-10 max-w-2xl">
+          <div className="eyebrow">Impor made easy ✨</div>
+          <h1 className="mb-6 font-display text-[42px] font-extrabold leading-[1.06] tracking-[-.045em] text-ink sm:text-[58px] lg:text-[66px]">
+            Barang incaranmu,<br />sampai di <span className="heading-highlight">Indonesia!</span>
+          </h1>
+          <p className="max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+            Mau belanja atau kulakan dari luar negeri? Kami bantu perjalanan barangmu dari Korea, China, Australia, dan Singapore sampai depan pintu.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" onClick={(event) => handleNav(event, '#contact')} className="focus-ring inline-flex min-h-12 items-center gap-3 rounded-full bg-[#153044] px-6 font-display text-sm font-bold text-white shadow-lg shadow-[#153044]/15 transition hover:-translate-y-0.5 hover:bg-[#20536a]">
+              Yuk, konsultasi <ArrowRight size={18} />
+            </a>
+            <a href="#services" onClick={(event) => handleNav(event, '#services')} className="focus-ring inline-flex min-h-12 items-center rounded-full border border-[#c9dce3] bg-white/75 px-6 font-display text-sm font-bold text-ink transition hover:bg-white">
+              Kenalan dengan rute kami
+            </a>
+          </div>
+          <div className="mt-9 flex flex-wrap gap-2">
+            {routes.map(({ flag, label }) => (
+              <span key={label} className="inline-flex items-center gap-2 rounded-full border border-white bg-white/80 px-3.5 py-2 text-xs font-bold text-ink shadow-sm"><span aria-hidden="true">{flag}</span> {label} <span className="text-[#1b9b91]">→ ID</span></span>
+            ))}
           </div>
         </div>
-        <div className="relative min-h-[330px] pl-4 md:min-h-full md:py-8 md:pr-0 lg:pl-7">
-          <div className="hero-photo h-full min-h-[530px] rounded-tl-[52px] md:rounded-tl-[72px]" role="img" aria-label="Kapal kontainer membawa barang impor" />
-          <div className="absolute left-8 right-7 top-5 flex justify-between text-[9px] font-bold tracking-[.14em] text-white sm:left-10 sm:right-10 md:top-12">
-            <span className="bg-[#102d3c]/35 px-3 py-2 backdrop-blur">SHIPPIN EXPRESS</span>
-            <span className="bg-[#102d3c]/40 px-3 py-2 backdrop-blur">INDONESIA IMPORT ROUTES</span>
-          </div>
-          <div className="hero-photo-card absolute bottom-7 left-0 flex min-w-[260px] items-center gap-3 bg-brand-yellow px-4 py-3.5 text-ink sm:bottom-14 sm:min-w-[310px] sm:px-5">
-            <span className="grid size-10 place-items-center bg-ink font-display text-xs font-extrabold text-white">SE</span>
-            <span className="flex flex-1 flex-col gap-1"><b className="font-display text-xs">IMPOR TANPA RIBET</b><small className="text-[10px] font-semibold text-[#40545a]">Korea · China · Australia</small></span>
-            <ArrowRight size={18} />
+
+        <div className="relative mx-auto w-full max-w-[510px]">
+          <div className="hero-art relative flex min-h-[380px] items-center justify-center overflow-hidden rounded-[36px] border border-white/80 p-5 sm:min-h-[450px] sm:rounded-[48px] sm:p-8">
+            <span className="absolute -left-10 top-8 size-36 rounded-full bg-[#ff826c]/20 blur-2xl" />
+            <span className="absolute -right-10 bottom-0 size-48 rounded-full bg-[#ffd166]/55 blur-2xl" />
+            <div className="floating-chip absolute left-5 top-7 z-10 flex items-center gap-2 rounded-2xl bg-white px-3.5 py-2.5 text-xs font-bold text-ink sm:left-8 sm:top-9"><Sparkles size={16} className="text-[#ff806b]" /> Tracking dibantu</div>
+            <div className="floating-chip absolute bottom-8 right-4 z-10 flex items-center gap-2 rounded-2xl bg-[#153044] px-3.5 py-2.5 text-xs font-bold text-white sm:bottom-10 sm:right-6"><Plane size={16} className="text-[#ffd166]" /> Udara atau laut</div>
+
+            <div className="hero-route-card relative z-0 w-full max-w-[340px] rotate-[-2deg] rounded-[28px] border border-white bg-white p-5 sm:p-6">
+              <div className="mb-5 flex items-center justify-between">
+                <div><div className="text-[10px] font-extrabold uppercase tracking-[.14em] text-[#1b9b91]">Paket siap jalan</div><div className="mt-1 font-display text-lg font-extrabold text-ink">From anywhere, to you</div></div>
+                <span className="grid size-10 place-items-center rounded-2xl bg-[#fff0d1] text-[#b87800]"><Box size={21} /></span>
+              </div>
+              <div className="flex items-center justify-between rounded-2xl bg-[#f4f9fb] p-3.5">
+                <div className="text-center"><div className="text-2xl" aria-hidden="true">🇸🇬</div><div className="mt-1 text-[10px] font-bold text-muted">Singapore</div></div>
+                <div className="relative mx-3 h-8 flex-1"><div className="route-dash absolute left-0 right-0 top-1/2 h-2 -translate-y-1/2" /><span className="absolute left-1/2 top-1/2 grid size-8 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#dff7f3] text-[#147f78]"><ArrowUpRight size={16} /></span></div>
+                <div className="text-center"><div className="text-2xl" aria-hidden="true">🇮🇩</div><div className="mt-1 text-[10px] font-bold text-muted">Indonesia</div></div>
+              </div>
+              <div className="mt-4 flex items-center gap-3 rounded-2xl bg-[#fff7df] p-3.5"><span className="grid size-10 place-items-center rounded-xl bg-[#ffd166] text-2xl" aria-hidden="true">📦</span><div className="flex-1"><div className="text-xs font-extrabold text-ink">Your goods, handled!</div><div className="mt-0.5 text-[10px] text-muted">Dokumen · Bea cukai · Pengantaran</div></div><span className="text-[#1b9b91]">✓</span></div>
+              <div className="mt-4 flex justify-between px-1 text-[9px] font-bold uppercase tracking-[.1em] text-[#9aaab0]"><span>Shippin Express</span><span>Route 001</span></div>
+            </div>
           </div>
         </div>
       </div>

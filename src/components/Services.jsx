@@ -1,37 +1,36 @@
 import React from 'react'
-import { ArrowRight, Plane, Ship } from 'lucide-react'
+import { ArrowUpRight, Plane, Ship } from 'lucide-react'
 
 const services = [
-  { icon: Plane, title: 'Impor Korea ke Indonesia', desc: 'Kosmetik, elektronik, fashion, K-beauty, dan produk pilihan Korea Selatan. Kami bantu koordinasi pengiriman, dokumen, dan proses kepabeanan hingga barang tiba.', mode: 'Udara & laut' },
-  { icon: Ship, title: 'Impor China ke Indonesia', desc: 'Pengadaan dan pengiriman barang manufaktur, elektronik, tekstil, hingga bahan baku dari China dengan dukungan koordinasi supplier dan customs.', mode: 'Laut & udara' },
-  { icon: Plane, title: 'Impor Australia ke Indonesia', desc: 'Bawa produk pertanian, suplemen, skincare, dan komoditas Australia ke Indonesia dengan pendampingan dokumen dan proses impor.', mode: 'Udara & laut' },
+  { flag: '🇰🇷', country: 'Korea', icon: Plane, tint: 'bg-[#e9e4ff]', label: 'Popular', desc: 'K-beauty, fashion, elektronik, dan banyak lagi. Kami bantu urus perjalanan paketmu sampai Indonesia.' },
+  { flag: '🇨🇳', country: 'China', icon: Ship, tint: 'bg-[#ffe7df]', label: 'Best value', desc: 'Kulakan produk, bahan baku, atau barang pilihan dengan dukungan pengiriman dan proses customs.' },
+  { flag: '🇦🇺', country: 'Australia', icon: Plane, tint: 'bg-[#e1f5dc]', label: 'Aussie finds', desc: 'Suplemen, skincare, produk pertanian, dan barang favorit dari Australia ke Indonesia.' },
+  { flag: '🇸🇬', country: 'Singapore', icon: Plane, tint: 'bg-[#fff0c9]', label: 'New route', desc: 'Belanja dari Singapore makin praktis—kami bantu dari penjemputan hingga tiba di alamatmu.' },
 ]
 
 export default function Services() {
   return (
     <section id="services" className="bg-white py-20 sm:py-24">
       <div className="section-shell">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-5 sm:mb-14">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-5 sm:mb-12">
           <div>
-            <div className="eyebrow">Layanan Kami</div>
-            <h2 className="section-heading max-w-2xl text-3xl font-bold leading-tight text-ink sm:text-5xl">Rute impor utama,<br />satu <span className="heading-highlight">mitra tepercaya.</span></h2>
+            <div className="eyebrow">Rute impor pilihan</div>
+            <h2 className="section-heading max-w-2xl text-3xl font-extrabold leading-tight text-ink sm:text-5xl">Jauh-jauh belanja,<br /><span className="heading-highlight">kami yang urus!</span></h2>
           </div>
-          <p className="max-w-md text-sm leading-7 text-muted">Dukungan dari pengambilan barang sampai proses kepabeanan dan pengantaran di Indonesia.</p>
+          <p className="max-w-md text-sm leading-7 text-muted">Empat negara asal, satu tim yang siap bantu sampai paket mendarat dengan aman.</p>
         </div>
 
-        <div className="grid gap-4 border-y border-line py-4 md:grid-cols-3 md:gap-0 md:py-0">
-          {services.map(({ icon: Icon, title, desc, mode }, index) => (
-            <article key={title} className="import-card flex min-h-[260px] flex-col border-line bg-white p-5 sm:p-7 md:border-r md:py-8 md:first:pl-0 md:last:border-r-0">
-              <div className="mb-7 flex items-start justify-between">
-                <span className="grid size-11 place-items-center bg-[#d7eef0] text-[#14364a]"><Icon size={21} /></span>
-                <span className="font-display text-[10px] font-bold text-[#8a989c]">0{index + 1}</span>
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {services.map(({ flag, country, icon: Icon, tint, label, desc }) => (
+            <article key={country} className="import-card flex min-h-[280px] flex-col rounded-[28px] border border-[#e5eef1] bg-[#fbfdfe] p-5 sm:p-6">
+              <div className="mb-6 flex items-start justify-between">
+                <span className={`grid size-14 place-items-center rounded-[20px] ${tint} text-3xl`} aria-hidden="true">{flag}</span>
+                <span className="rounded-full bg-[#eef8f6] px-3 py-1.5 text-[9px] font-extrabold uppercase tracking-[.1em] text-[#147f78]">{label}</span>
               </div>
-              <h3 className="font-display text-lg font-bold leading-snug text-ink">{title}</h3>
-              <p className="mt-3 flex-1 text-[13px] leading-6 text-muted">{desc}</p>
-              <div className="mt-5 flex items-center justify-between border-t border-line pt-4">
-                <span className="text-[10px] font-bold uppercase tracking-[.12em] text-[#226b82]">{mode}</span>
-                <a href="#contact" className="focus-ring inline-flex items-center gap-2 font-display text-xs font-bold text-[#226b82]">Tanya impor <ArrowRight size={15} /></a>
-              </div>
+              <div className="mb-2 flex items-center gap-2"><Icon size={16} className="text-[#1b9b91]" /><span className="text-[10px] font-bold uppercase tracking-[.11em] text-[#77909a]">Import ke Indonesia</span></div>
+              <h3 className="font-display text-xl font-extrabold text-ink">Dari {country}</h3>
+              <p className="mt-2 flex-1 text-[13px] leading-6 text-muted">{desc}</p>
+              <a href="#contact" className="focus-ring mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2.5 font-display text-xs font-extrabold text-ink shadow-sm ring-1 ring-[#e5eef1] transition hover:bg-[#153044] hover:text-white">Tanya rute <ArrowUpRight size={15} /></a>
             </article>
           ))}
         </div>

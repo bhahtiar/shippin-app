@@ -13,10 +13,11 @@ const services = [
   'Import Korea',
   'Import China',
   'Import Australia',
+  'Import Singapore',
   'Air & ocean freight',
 ]
 
-const routes = ['ID', 'KR', 'CN', 'AU']
+const routes = ['ID', 'KR', 'CN', 'AU', 'SG']
 
 export default function Footer() {
   const handleNav = (event, href) => {
@@ -47,7 +48,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="max-w-64 text-sm leading-7 text-white/45">
-              Mitra impor terpercaya dari Korea, China, dan Australia ke Indonesia.
+              Mitra impor terpercaya dari Korea, China, Australia, dan Singapore ke Indonesia.
             </p>
           </div>
 
@@ -100,7 +101,7 @@ export default function Footer() {
             {routes.map((route) => (
               <span
                 key={route}
-                className="inline-flex items-center gap-1 rounded border border-white/10 px-2 py-1 text-xs font-semibold text-white/50"
+                className="inline-flex items-center gap-1 rounded-full border border-white/10 px-2.5 py-1.5 text-xs font-semibold text-white/60"
               >
                 <Globe2 size={12} /> {route}
               </span>

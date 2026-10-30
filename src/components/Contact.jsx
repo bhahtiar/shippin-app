@@ -7,10 +7,11 @@ const services = [
   'Import Korea ke Indonesia',
   'Import China ke Indonesia',
   'Import Australia ke Indonesia',
+  'Import Singapore ke Indonesia',
 ]
 
 const fieldBase =
-  'w-full rounded-[10px] border bg-white px-4 py-3.5 text-[15px] text-ink outline-none transition placeholder:text-muted/50 focus:border-ink'
+  'w-full rounded-2xl border bg-white px-4 py-3.5 text-[15px] text-ink outline-none transition placeholder:text-muted/50 focus:border-[#1b9b91]'
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -61,7 +62,7 @@ Mohon informasinya. Terima kasih!`
   }
 
   return (
-    <section id="contact" className="bg-soft py-24">
+    <section id="contact" className="bg-[#eef8f7] py-20 sm:py-24">
       <div className="section-shell">
         <div className="grid items-start gap-16 lg:grid-cols-2">
           <div>
@@ -77,20 +78,20 @@ Mohon informasinya. Terima kasih!`
             <div className="flex flex-col gap-5">
               <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 815-1123-3838" />
               <ContactItem icon={Package} label="Layanan" value="Impor udara dan laut" />
-              <ContactItem icon={Globe2} label="Rute impor" value="Korea, China, Australia ke Indonesia" />
+              <ContactItem icon={Globe2} label="Rute impor" value="Korea, China, Australia & Singapore ke Indonesia" />
             </div>
 
             <a
               href={`https://wa.me/${WA_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="focus-ring mt-8 inline-flex items-center gap-2.5 rounded-[10px] bg-[#25D366] px-7 py-3.5 font-display text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#1ebe59]"
+              className="focus-ring mt-8 inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3.5 font-display text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#1ebe59]"
             >
               <MessageCircle size={18} /> Chat WhatsApp Langsung
             </a>
           </div>
 
-          <div className="rounded-2xl border border-line bg-white p-6 sm:p-9">
+          <div className="rounded-[30px] border border-white bg-white p-6 shadow-[0_20px_55px_rgba(21,48,68,.07)] sm:p-9">
             <h3 className="mb-7 font-display text-xl font-extrabold text-ink">Kirim Pesan</h3>
 
             <div className="flex flex-col gap-4">
@@ -156,7 +157,7 @@ Mohon informasinya. Terima kasih!`
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="focus-ring flex w-full items-center justify-center gap-2 rounded-[10px] bg-ink px-4 py-4 font-display text-sm font-bold text-brand-yellow transition hover:-translate-y-0.5 hover:bg-[#333]"
+                className="focus-ring flex w-full items-center justify-center gap-2 rounded-full bg-ink px-4 py-4 font-display text-sm font-bold text-brand-yellow transition hover:-translate-y-0.5 hover:bg-[#20536a]"
               >
                 <Send size={18} /> Kirim via WhatsApp
               </button>
@@ -185,7 +186,7 @@ function FormField({ label, error, children }) {
 function ContactItem({ icon: Icon, label, value }) {
   return (
     <div className="flex items-start gap-3.5">
-      <div className="grid size-10 shrink-0 place-items-center rounded-[10px] bg-brand-yellow text-ink">
+      <div className="grid size-10 shrink-0 place-items-center rounded-2xl bg-brand-yellow text-ink">
         <Icon size={18} />
       </div>
       <div>

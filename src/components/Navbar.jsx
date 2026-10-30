@@ -46,12 +46,12 @@ export default function Navbar() {
         <a
           href="#hero"
           onClick={(event) => handleNav(event, '#hero')}
-          className="focus-ring flex items-center gap-2.5 rounded-lg no-underline"
+          className="focus-ring flex items-center gap-2.5 rounded-2xl no-underline"
         >
           <img
             src="/logo.png"
             alt="Shippin Express"
-            className="size-10 rounded-lg object-cover"
+            className="size-10 rounded-2xl object-cover ring-2 ring-[#dff7f3]"
           />
           <span className="font-display text-[17px] font-extrabold text-ink">
             Shippin <span className="font-normal">Express</span>
@@ -72,7 +72,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={(event) => handleNav(event, '#contact')}
-            className="focus-ring rounded-lg bg-brand-yellow px-5 py-2.5 font-display text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-brand-yellow-hover"
+            className="focus-ring rounded-full bg-brand-yellow px-5 py-2.5 font-display text-sm font-extrabold text-ink transition hover:-translate-y-0.5 hover:bg-brand-yellow-hover"
           >
             Hubungi Kami
           </a>
@@ -105,7 +105,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(event) => handleNav(event, '#contact')}
-              className="mt-3 rounded-lg bg-brand-yellow px-5 py-3.5 text-center font-display text-sm font-bold text-ink"
+              className="mt-3 rounded-full bg-brand-yellow px-5 py-3.5 text-center font-display text-sm font-extrabold text-ink"
             >
               Hubungi Kami
             </a>
