@@ -96,10 +96,10 @@ export default function Footer() {
               </h4>
               <div className="flex flex-col gap-2">
                 <a href="https://www.instagram.com/shippinexpress/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @shippinexpress" className="inline-flex w-fit items-center gap-2.5 text-sm text-white/55 transition hover:text-brand-yellow">
-                  <InstagramMark /> <span>Instagram <b className="font-semibold text-white">@shippinexpress</b></span>
+                  <InstagramMark />
                 </a>
                 <a href="https://www.facebook.com/shippinexpress" target="_blank" rel="noopener noreferrer" aria-label="Facebook @shippinexpress" className="inline-flex w-fit items-center gap-2.5 text-sm text-white/55 transition hover:text-brand-yellow">
-                  <FacebookMark /> <span>Facebook <b className="font-semibold text-white">@shippinexpress</b></span>
+                  <FacebookMark />
                 </a>
               </div>
             </div>
