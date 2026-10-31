@@ -23,7 +23,7 @@ export default function Hero() {
             Barang incaranmu,<br />sampai di <span className="heading-highlight">Indonesia!</span>
           </h1>
           <p className="max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-            Mau belanja atau kulakan dari luar negeri? Kami bantu perjalanan barangmu dari Korea, China, Australia, dan Singapore sampai depan pintu.
+            Mau belanja atau kulakan dari luar negeri? Kami bantu perjalanan barangmu dari Korea, China, Australia, dan Singapore sampai depan pintu. Harga kirim sudah termasuk bea cukai, dengan pengantaran gratis untuk area Jakarta.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#contact" onClick={(event) => handleNav(event, '#contact')} className="focus-ring action-dark inline-flex min-h-12 items-center gap-3 rounded-full px-6 font-display text-sm font-bold shadow-lg shadow-[#153044]/15 transition hover:-translate-y-0.5">
@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
           <div className="mt-9 flex flex-wrap gap-2">
             {routes.map(({ flag, label }) => (
-              <span key={label} className="inline-flex items-center gap-2 rounded-full border border-white bg-white/80 px-3.5 py-2 text-xs font-bold text-ink shadow-sm"><span aria-hidden="true">{flag}</span> {label} <span className="text-[#1b9b91]">→ 🇮🇩 Indonesia</span></span>
+              <span key={label} className="inline-flex items-center gap-2 rounded-full border border-white bg-white/80 px-3.5 py-2 text-xs font-bold text-ink shadow-sm"><span aria-hidden="true">{flag}</span> {label} <span className="text-[#1b9b91]">→ ID</span></span>
             ))}
           </div>
         </div>

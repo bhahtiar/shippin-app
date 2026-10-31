@@ -71,13 +71,13 @@ Mohon informasinya. Terima kasih!`
               Siap membantu kebutuhan impor Anda <span className="heading-highlight">sekarang.</span>
             </h2>
             <p className="mb-10 text-[15px] leading-8 text-muted">
-              Isi form di samping dan kami akan merespons via WhatsApp. Biaya impor disampaikan di awal; pelanggan tidak ditagih biaya lain di luar biaya yang disepakati.
+              Isi form di samping dan kami akan merespons via WhatsApp. Harga kirim sudah termasuk bea cukai, dengan pengantaran gratis untuk area Jakarta.
             </p>
 
             <div className="flex flex-col gap-5">
               <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 815-1123-3838" />
-              <ContactItem icon={Package} label="Layanan" value="Import all-in · minimum 1 kg atau 10 kg" />
-              <ContactItem icon={Globe2} label="Rute impor" value="🇰🇷 Korea · 🇨🇳 China · 🇦🇺 Australia · 🇸🇬 Singapore → 🇮🇩 Indonesia" />
+              <ContactItem icon={Package} label="Layanan" value="Import all-in · bea cukai termasuk" />
+              <ContactItem icon={Globe2} label="Rute impor" value="Korea, China, Australia & Singapore ke Indonesia" />
             </div>
 
             <a

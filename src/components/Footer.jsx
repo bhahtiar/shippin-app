@@ -1,5 +1,5 @@
 import React from 'react'
-import { MessageCircle } from 'lucide-react'
+import { Globe2, MessageCircle } from 'lucide-react'
 
 const navLinks = [
   { label: 'Beranda', href: '#hero' },
@@ -10,14 +10,14 @@ const navLinks = [
 ]
 
 const services = [
-  '🇰🇷 Import Korea · minimum 1 kg',
-  '🇨🇳 Import China · minimum 10 kg',
-  '🇦🇺 Import Australia · minimum 1 kg',
-  '🇸🇬 Import Singapore · minimum 10 kg',
-  'Jasa import all-in · biaya jelas di awal',
+  'Import Korea · minimum 1 kg',
+  'Import China · minimum 10 kg',
+  'Import Australia · minimum 1 kg',
+  'Import Singapore · minimum 10 kg',
+  'Bea cukai termasuk · gratis antar area Jakarta',
 ]
 
-const routes = ['🇰🇷 → 🇮🇩', '🇨🇳 → 🇮🇩', '🇦🇺 → 🇮🇩', '🇸🇬 → 🇮🇩']
+const routes = ['ID', 'KR', 'CN', 'AU', 'SG']
 
 export default function Footer() {
   const handleNav = (event, href) => {
@@ -48,7 +48,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="max-w-64 text-sm leading-7 text-white/45">
-              Jasa import all-in dari Korea, China, Australia, dan Singapore ke Indonesia. Hampir semua barang dapat dikonsultasikan.
+              Mitra impor terpercaya dari Korea, China, Australia, dan Singapore ke Indonesia.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export default function Footer() {
                 key={route}
                 className="inline-flex items-center gap-1 rounded-full border border-white/10 px-2.5 py-1.5 text-xs font-semibold text-white/60"
               >
-                {route}
+                <Globe2 size={12} /> {route}
               </span>
             ))}
           </div>

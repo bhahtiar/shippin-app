@@ -8,25 +8,25 @@ const routeGroups = [
   {
     country: 'Korea Selatan', flag: '🇰🇷', minimum: 'Minimum 1 kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Jasa import all-in', leadTime: 'Konfirmasi', note: 'Biaya diinformasikan di awal; tidak ada tagihan biaya lain di luar biaya yang disepakati.' },
+      { name: 'Jasa import all-in', leadTime: 'Minimum 1 kg', note: 'Harga kirim sudah termasuk bea cukai. Pengantaran area Jakarta gratis.' },
     ],
   },
   {
     country: 'China', flag: '🇨🇳', minimum: 'Minimum 10 kg', icon: Ship, modes: 'All-in',
     lanes: [
-      { name: 'Jasa import all-in', leadTime: 'Konfirmasi', note: 'Biaya diinformasikan di awal; tidak ada tagihan biaya lain di luar biaya yang disepakati.' },
+      { name: 'Jasa import all-in', leadTime: 'Minimum 10 kg', note: 'Harga kirim sudah termasuk bea cukai. Pengantaran area Jakarta gratis.' },
     ],
   },
   {
     country: 'Australia', flag: '🇦🇺', minimum: 'Minimum 1 kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Jasa import all-in', leadTime: 'Konfirmasi', note: 'Biaya diinformasikan di awal; tidak ada tagihan biaya lain di luar biaya yang disepakati.' },
+      { name: 'Jasa import all-in', leadTime: 'Minimum 1 kg', note: 'Harga kirim sudah termasuk bea cukai. Pengantaran area Jakarta gratis.' },
     ],
   },
   {
     country: 'Singapore', flag: '🇸🇬', minimum: 'Minimum 10 kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Jasa import all-in', leadTime: 'Konfirmasi', note: 'Biaya diinformasikan di awal; tidak ada tagihan biaya lain di luar biaya yang disepakati.' },
+      { name: 'Jasa import all-in', leadTime: 'Minimum 10 kg', note: 'Harga kirim sudah termasuk bea cukai. Pengantaran area Jakarta gratis.' },
     ],
   },
 ]
@@ -37,7 +37,7 @@ export default function Pricing({ pathname }) {
   const contactHref = isStandalone ? '/#contact' : '#contact'
   const Title = isStandalone ? 'h1' : 'h2'
   const pageTitle = 'Harga Jasa Import ke Indonesia | Shippin Express'
-  const pageDescription = 'Jasa import all-in ke Indonesia dari Korea, China, Australia, dan Singapore. Minimum 1 kg untuk Korea dan Australia; 10 kg untuk China dan Singapore.'
+  const pageDescription = 'Jasa import all-in dari Korea, China, Australia, dan Singapore. Harga kirim termasuk bea cukai, gratis pengantaran area Jakarta. Minimum 1 kg atau 10 kg sesuai rute.'
   const canonicalUrl = 'https://shippinexpress.com/pricing/'
   const pageSchema = { '@context': 'https://schema.org', '@type': 'WebPage', name: pageTitle, description: pageDescription, url: canonicalUrl, about: { '@id': 'https://shippinexpress.com/#organization' } }
 
@@ -53,7 +53,7 @@ export default function Pricing({ pathname }) {
               Pilih rute, cek <span className="heading-highlight">opsi kirimnya.</span>
             </Title>
             <p className="max-w-xl text-sm leading-7 text-muted sm:text-base">
-              Jasa import all-in: biaya diinformasikan di awal dan tidak ada tagihan biaya lain di luar biaya yang disepakati. Minimum 1 kg untuk Korea dan Australia; 10 kg untuk China dan Singapore. Hampir semua barang dapat dikonsultasikan, kecuali barang ilegal atau dilarang.
+              Layanan import all-in dengan harga kirim yang sudah termasuk bea cukai dan pengantaran gratis untuk area Jakarta. Minimum 1 kg dari Korea dan Australia, serta 10 kg dari China dan Singapore. Kami dapat membantu mengimpor beragam jenis barang; beberapa dangerous goods tidak dapat kami tangani.
             </p>
           </div>
           <a
@@ -67,8 +67,8 @@ export default function Pricing({ pathname }) {
         </div>
 
         <div className="mb-6 grid gap-2 sm:grid-cols-3">
-          <TrustPill icon={CheckCircle2} text="Biaya all-in, diinformasikan di awal" />
-          <TrustPill icon={ShieldCheck} text="Hampir semua jenis barang" />
+          <TrustPill icon={CheckCircle2} text="Bea cukai sudah termasuk" />
+          <TrustPill icon={ShieldCheck} text="Pengantaran area Jakarta gratis" />
           <TrustPill icon={Clock3} text="Minimum 1 kg atau 10 kg per rute" />
         </div>
 
@@ -82,8 +82,7 @@ export default function Pricing({ pathname }) {
                   <span className="grid size-12 place-items-center rounded-2xl bg-[#e9f7f5] text-2xl" aria-hidden="true">{group.flag}</span>
                   <div className="min-w-0 flex-1">
                     <div className="text-[10px] font-extrabold uppercase tracking-[.13em] text-[#218f87]">{group.modes} · impor</div>
-                    <h3 className="font-display text-lg font-extrabold text-ink">{group.country} <span className="font-semibold text-muted">{group.flag} → 🇮🇩 Indonesia</span></h3>
-                    <p className="mt-1 text-xs font-bold text-[#147f78]">{group.minimum}</p>
+                    <h3 className="font-display text-lg font-extrabold text-ink">{group.country} <span className="font-semibold text-muted">→ Indonesia</span></h3>
                   </div>
                   <span className="grid size-10 place-items-center rounded-full bg-[#fff4d7] text-[#a96a00]"><Icon size={18} /></span>
                 </header>
@@ -96,12 +95,12 @@ export default function Pricing({ pathname }) {
                       </div>
                       <div className="flex items-center justify-between gap-3 sm:justify-end">
                         <div className="sm:text-right">
-                          <div className="text-[9px] font-bold uppercase tracking-[.1em] text-muted">Estimasi transit</div>
-                          <div className="mt-0.5 font-display text-sm font-extrabold text-ink">{lane.leadTime}</div>
+                          <div className="text-[9px] font-bold uppercase tracking-[.1em] text-muted">Minimum berat</div>
+                          <div className="mt-0.5 font-display text-sm font-extrabold text-ink">{group.minimum}</div>
                         </div>
                         <div className="h-8 w-px bg-[#dce8ed]" />
                         <div className="sm:text-right">
-                          <div className="text-[9px] font-bold uppercase tracking-[.1em] text-muted">Tarif</div>
+                          <div className="text-[9px] font-bold uppercase tracking-[.1em] text-muted">Harga kirim</div>
                           <div className="mt-0.5 font-display text-sm font-extrabold text-[#16877f]">All-in</div>
                         </div>
                       </div>
@@ -109,7 +108,7 @@ export default function Pricing({ pathname }) {
                   ))}
                 </div>
                 <div className="flex items-center justify-between gap-3 border-t border-[#eaf1f3] px-5 py-3.5 sm:px-6">
-                  <span className="text-[11px] leading-5 text-muted">Biaya disepakati di awal.</span>
+                  <span className="text-[11px] leading-5 text-muted">Termasuk bea cukai · Jakarta gratis</span>
                   <a href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer" className="focus-ring action-mint inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2 font-display text-xs font-extrabold transition">Tanya rute <ArrowRight size={14} /></a>
                 </div>
               </article>
@@ -124,8 +123,8 @@ export default function Pricing({ pathname }) {
             <a href={contactHref} className="focus-ring action-yellow mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2.5 font-display text-xs font-extrabold transition">Kirim detail kargo <ArrowRight size={14} /></a>
           </div>
           <div className="grid gap-3 rounded-[26px] border border-[#dce8ed] bg-white p-5 text-xs leading-6 text-muted sm:grid-cols-2 sm:p-6">
-            <div className="flex gap-3"><Calculator size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Minimum berat:</b> 1 kg untuk Korea Selatan dan Australia; 10 kg untuk China dan Singapore. Hubungi tim untuk konfirmasi cara penimbangan.</p></div>
-            <div className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Barang yang bisa diimpor:</b> hampir semua jenis dapat dikonsultasikan. Barang ilegal dan barang yang dilarang oleh peraturan tidak dapat dilayani.</p></div>
+            <div className="flex gap-3"><Calculator size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Minimum berat:</b> 1 kg untuk Korea Selatan dan Australia; 10 kg untuk China dan Singapore. Harga kirim sudah termasuk bea cukai.</p></div>
+            <div className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Jenis barang:</b> kami dapat membantu mengimpor beragam jenis barang. Beberapa dangerous goods mungkin tidak dapat kami tangani; konsultasikan detailnya kepada tim kami.</p></div>
           </div>
         </div>
       </div>

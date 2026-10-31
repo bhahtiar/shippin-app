@@ -4,7 +4,7 @@ import { ClipboardCheck, Globe2, PackageCheck, Truck } from 'lucide-react'
 const achievements = [
   { icon: Globe2, title: 'Rute impor aktif', label: 'Korea, China, Australia, Singapore' },
   { icon: ClipboardCheck, title: 'Bantuan dokumen', label: 'Invoice, packing list, dan customs' },
-  { icon: Truck, title: 'Door-to-door support', label: 'Pickup sampai pengantaran akhir' },
+  { icon: Truck, title: 'Gratis pengantaran Jakarta', label: 'Bea cukai termasuk harga kirim' },
   { icon: PackageCheck, title: 'Koordinasi cargo', label: 'Update proses dan estimasi pengiriman' },
 ]
 
