@@ -94,7 +94,7 @@ export default function Footer() {
               <h4 className="mb-3 font-display text-[12px] font-bold uppercase tracking-[1px] text-white/70">
                 Ikuti Kami
               </h4>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-row items-center gap-3">
                 <a href="https://www.instagram.com/shippinexpress/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @shippinexpress" className="inline-flex w-fit items-center gap-2.5 text-sm text-white/55 transition hover:text-brand-yellow">
                   <InstagramMark />
                 </a>
