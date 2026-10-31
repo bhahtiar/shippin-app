@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
           <div className="mt-9 flex flex-wrap gap-2">
             {routes.map(({ flag, label }) => (
-              <span key={label} className="inline-flex items-center gap-2 rounded-full border border-white bg-white/80 px-3.5 py-2 text-xs font-bold text-ink shadow-sm"><span aria-hidden="true">{flag}</span> {label} <span className="text-[#1b9b91]">→ ID</span></span>
+              <span key={label} className="inline-flex items-center gap-2 rounded-full border border-white bg-white/80 px-3.5 py-2 text-xs font-bold text-ink shadow-sm"><span aria-hidden="true">{flag}</span> {label} <span className="text-[#1b9b91]">→ 🇮🇩 Indonesia</span></span>
             ))}
           </div>
         </div>

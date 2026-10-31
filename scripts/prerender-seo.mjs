@@ -7,10 +7,10 @@ import {createServer} from 'vite'
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const dist=path.join(root,'dist')
 const site='https://shippinexpress.com'
-const homeTitle='Jasa Import ke Indonesia | Shippin Express'
-const homeDesc='Jasa import barang dari Korea, China, Australia, dan Singapore ke Indonesia. Cargo udara dan laut, bantuan dokumen impor, customs clearance, dan pengantaran.'
+const homeTitle='Jasa Import All-in ke Indonesia | Shippin Express'
+const homeDesc='Jasa import all-in ke Indonesia. Minimum 1 kg dari Korea dan Australia, 10 kg dari China dan Singapore. Hampir semua barang dapat dikonsultasikan.'
 const org={'@type':'Organization','@id':site+'/#organization',name:'Shippin Express',url:site+'/',logo:site+'/logo.png',telephone:'+62 815-1123-3838',description:homeDesc,areaServed:{'@type':'Country',name:'Indonesia'},contactPoint:{'@type':'ContactPoint',telephone:'+62 815-1123-3838',contactType:'sales',availableLanguage:'Indonesian'}}
-const pages=[{path:'/',title:homeTitle,description:homeDesc,kind:'home'},{path:'/pricing/',title:'Harga Jasa Import ke Indonesia | Shippin Express',description:'Opsi cargo dan estimasi jasa import dari Korea, China, Australia, dan Singapore ke Indonesia. Minta rate berdasarkan detail kargo.',kind:'pricing'}]
+const pages=[{path:'/',title:homeTitle,description:homeDesc,kind:'home'},{path:'/pricing/',title:'Harga Jasa Import All-in ke Indonesia | Shippin Express',description:'Jasa import all-in ke Indonesia dari Korea, China, Australia, dan Singapore. Minimum 1 kg untuk Korea dan Australia; 10 kg untuk China dan Singapore.',kind:'pricing'}]
 let vite
 try {
  vite=await createServer({root,configFile:path.join(root,'vite.config.js'),server:{middlewareMode:true},appType:'custom'})

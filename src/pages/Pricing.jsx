@@ -6,29 +6,27 @@ const WA_NUMBER = '6281511233838'
 
 const routeGroups = [
   {
-    country: 'Korea', flag: '🇰🇷', icon: Plane, modes: 'Air freight',
+    country: 'Korea Selatan', flag: '🇰🇷', minimum: 'Minimum 1 kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Air Express', leadTime: '3–5 hari', note: 'Untuk barang yang perlu tiba lebih cepat.' },
-      { name: 'Air Regular', leadTime: '5–12 hari', note: 'Opsi lebih hemat untuk kargo yang lebih besar.' },
+      { name: 'Jasa import all-in', leadTime: 'Konfirmasi', note: 'Biaya diinformasikan di awal; tidak ada tagihan biaya lain di luar biaya yang disepakati.' },
     ],
   },
   {
-    country: 'China', flag: '🇨🇳', icon: Ship, modes: 'Udara & laut',
+    country: 'China', flag: '🇨🇳', minimum: 'Minimum 10 kg', icon: Ship, modes: 'All-in',
     lanes: [
-      { name: 'Air cargo', leadTime: 'By request', note: 'Opsi pengiriman cepat, dikonfirmasi sesuai jenis kargo.' },
-      { name: 'Sea cargo', leadTime: 'By request', note: 'Cocok untuk barang berukuran besar atau pengiriman grosir.' },
+      { name: 'Jasa import all-in', leadTime: 'Konfirmasi', note: 'Biaya diinformasikan di awal; tidak ada tagihan biaya lain di luar biaya yang disepakati.' },
     ],
   },
   {
-    country: 'Australia', flag: '🇦🇺', icon: Plane, modes: 'Air freight',
+    country: 'Australia', flag: '🇦🇺', minimum: 'Minimum 1 kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Air Express', leadTime: '3–6 hari', note: 'Pickup dan pengantaran dapat dikonsultasikan.' },
+      { name: 'Jasa import all-in', leadTime: 'Konfirmasi', note: 'Biaya diinformasikan di awal; tidak ada tagihan biaya lain di luar biaya yang disepakati.' },
     ],
   },
   {
-    country: 'Singapore', flag: '🇸🇬', icon: Plane, modes: 'Air freight',
+    country: 'Singapore', flag: '🇸🇬', minimum: 'Minimum 10 kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Air Express', leadTime: 'By request', note: 'Estimasi dikonfirmasi sesuai barang dan lokasi pickup.' },
+      { name: 'Jasa import all-in', leadTime: 'Konfirmasi', note: 'Biaya diinformasikan di awal; tidak ada tagihan biaya lain di luar biaya yang disepakati.' },
     ],
   },
 ]
@@ -39,7 +37,7 @@ export default function Pricing({ pathname }) {
   const contactHref = isStandalone ? '/#contact' : '#contact'
   const Title = isStandalone ? 'h1' : 'h2'
   const pageTitle = 'Harga Jasa Import ke Indonesia | Shippin Express'
-  const pageDescription = 'Opsi cargo dan estimasi jasa import dari Korea, China, Australia, dan Singapore ke Indonesia. Minta rate berdasarkan detail kargo.'
+  const pageDescription = 'Jasa import all-in ke Indonesia dari Korea, China, Australia, dan Singapore. Minimum 1 kg untuk Korea dan Australia; 10 kg untuk China dan Singapore.'
   const canonicalUrl = 'https://shippinexpress.com/pricing/'
   const pageSchema = { '@context': 'https://schema.org', '@type': 'WebPage', name: pageTitle, description: pageDescription, url: canonicalUrl, about: { '@id': 'https://shippinexpress.com/#organization' } }
 
@@ -55,7 +53,7 @@ export default function Pricing({ pathname }) {
               Pilih rute, cek <span className="heading-highlight">opsi kirimnya.</span>
             </Title>
             <p className="max-w-xl text-sm leading-7 text-muted sm:text-base">
-              Tiap barang punya kebutuhan berbeda. Lihat opsi dan estimasi awal di bawah, lalu minta rate final berdasarkan detail kargomu.
+              Jasa import all-in: biaya diinformasikan di awal dan tidak ada tagihan biaya lain di luar biaya yang disepakati. Minimum 1 kg untuk Korea dan Australia; 10 kg untuk China dan Singapore. Hampir semua barang dapat dikonsultasikan, kecuali barang ilegal atau dilarang.
             </p>
           </div>
           <a
@@ -69,9 +67,9 @@ export default function Pricing({ pathname }) {
         </div>
 
         <div className="mb-6 grid gap-2 sm:grid-cols-3">
-          <TrustPill icon={CheckCircle2} text="Empat rute impor ke Indonesia" />
-          <TrustPill icon={ShieldCheck} text="Bantuan dokumen & kepabeanan" />
-          <TrustPill icon={Clock3} text="Estimasi waktu per opsi kirim" />
+          <TrustPill icon={CheckCircle2} text="Biaya all-in, diinformasikan di awal" />
+          <TrustPill icon={ShieldCheck} text="Hampir semua jenis barang" />
+          <TrustPill icon={Clock3} text="Minimum 1 kg atau 10 kg per rute" />
         </div>
 
         <div className="grid gap-4 lg:grid-cols-2">
@@ -84,7 +82,8 @@ export default function Pricing({ pathname }) {
                   <span className="grid size-12 place-items-center rounded-2xl bg-[#e9f7f5] text-2xl" aria-hidden="true">{group.flag}</span>
                   <div className="min-w-0 flex-1">
                     <div className="text-[10px] font-extrabold uppercase tracking-[.13em] text-[#218f87]">{group.modes} · impor</div>
-                    <h3 className="font-display text-lg font-extrabold text-ink">{group.country} <span className="font-semibold text-muted">→ Indonesia</span></h3>
+                    <h3 className="font-display text-lg font-extrabold text-ink">{group.country} <span className="font-semibold text-muted">{group.flag} → 🇮🇩 Indonesia</span></h3>
+                    <p className="mt-1 text-xs font-bold text-[#147f78]">{group.minimum}</p>
                   </div>
                   <span className="grid size-10 place-items-center rounded-full bg-[#fff4d7] text-[#a96a00]"><Icon size={18} /></span>
                 </header>
@@ -103,14 +102,14 @@ export default function Pricing({ pathname }) {
                         <div className="h-8 w-px bg-[#dce8ed]" />
                         <div className="sm:text-right">
                           <div className="text-[9px] font-bold uppercase tracking-[.1em] text-muted">Tarif</div>
-                          <div className="mt-0.5 font-display text-sm font-extrabold text-[#16877f]">Cek rate</div>
+                          <div className="mt-0.5 font-display text-sm font-extrabold text-[#16877f]">All-in</div>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
                 <div className="flex items-center justify-between gap-3 border-t border-[#eaf1f3] px-5 py-3.5 sm:px-6">
-                  <span className="text-[11px] leading-5 text-muted">Tarif final mengikuti detail kargo.</span>
+                  <span className="text-[11px] leading-5 text-muted">Biaya disepakati di awal.</span>
                   <a href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer" className="focus-ring action-mint inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2 font-display text-xs font-extrabold transition">Tanya rute <ArrowRight size={14} /></a>
                 </div>
               </article>
@@ -125,8 +124,8 @@ export default function Pricing({ pathname }) {
             <a href={contactHref} className="focus-ring action-yellow mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2.5 font-display text-xs font-extrabold transition">Kirim detail kargo <ArrowRight size={14} /></a>
           </div>
           <div className="grid gap-3 rounded-[26px] border border-[#dce8ed] bg-white p-5 text-xs leading-6 text-muted sm:grid-cols-2 sm:p-6">
-            <div className="flex gap-3"><Calculator size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Berat volumetrik:</b> tarif dihitung dari berat aktual atau volumetrik, mana yang lebih besar. Rumus umum udara: panjang × lebar × tinggi (cm) ÷ 6.000.</p></div>
-            <div className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Rate final:</b> dipastikan setelah tim mengecek jenis barang, ukuran, layanan, lokasi pickup, dan tujuan pengiriman.</p></div>
+            <div className="flex gap-3"><Calculator size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Minimum berat:</b> 1 kg untuk Korea Selatan dan Australia; 10 kg untuk China dan Singapore. Hubungi tim untuk konfirmasi cara penimbangan.</p></div>
+            <div className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-[#16877f]" /><p><b className="text-ink">Barang yang bisa diimpor:</b> hampir semua jenis dapat dikonsultasikan. Barang ilegal dan barang yang dilarang oleh peraturan tidak dapat dilayani.</p></div>
           </div>
         </div>
       </div>
