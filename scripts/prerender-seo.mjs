@@ -8,9 +8,9 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const dist=path.join(root,'dist')
 const site='https://shippinexpress.com'
 const homeTitle='Jasa Import All-in ke Indonesia | Shippin Express'
-const homeDesc='Jasa import all-in dari Korea, China, Australia, dan Singapore. Harga kirim termasuk bea masuk dan pajak; pengantaran area Jakarta gratis. Minimum 1 kg atau 10 kg sesuai rute.'
+const homeDesc='Jasa import all-in: Korea Rp280.000/kg, China Rp250.000/kg, Australia AUD25/kg, Singapore Rp125.000/kg. Bea masuk dan pajak termasuk; syarat & ketentuan berlaku.'
 const org={'@type':'Organization','@id':site+'/#organization',name:'Shippin Express',url:site+'/',logo:site+'/logo.png',telephone:'+62 815-1123-3838',description:homeDesc,areaServed:{'@type':'Country',name:'Indonesia'},contactPoint:{'@type':'ContactPoint',telephone:'+62 815-1123-3838',contactType:'sales',availableLanguage:'Indonesian'}}
-const pages=[{path:'/',title:homeTitle,description:homeDesc,kind:'home'},{path:'/pricing/',title:'Harga Jasa Import All-in ke Indonesia | Shippin Express',description:'Jasa import all-in dari Korea, China, Australia, dan Singapore. Harga kirim sudah termasuk bea masuk dan pajak, gratis pengantaran area Jakarta. Minimum 1 kg atau 10 kg sesuai rute.',kind:'pricing'}]
+const pages=[{path:'/',title:homeTitle,description:homeDesc,kind:'home'},{path:'/pricing/',title:'Harga Jasa Import All-in ke Indonesia | Shippin Express',description:'Harga import all-in mulai Rp280.000/kg dari Korea, Rp250.000/kg dari China, AUD25/kg dari Australia, dan Rp125.000/kg dari Singapore. Syarat & ketentuan berlaku.',kind:'pricing'}]
 let vite
 try {
  vite=await createServer({root,configFile:path.join(root,'vite.config.js'),server:{middlewareMode:true},appType:'custom'})

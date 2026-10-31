@@ -6,27 +6,27 @@ const WA_NUMBER = '6281511233838'
 
 const routeGroups = [
   {
-    country: 'Korea Selatan', flag: '🇰🇷', minimum: 'Minimum 1 kg', icon: Plane, modes: 'All-in',
+    country: 'Korea Selatan', flag: '🇰🇷', minimum: 'Minimum 1 kg', startingRate: 'Rp 280.000/kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Jasa import all-in', leadTime: 'Minimum 1 kg', note: 'Harga kirim sudah termasuk bea masuk dan pajak. Pengantaran area Jakarta gratis.' },
+      { name: 'Jasa import all-in', leadTime: 'Minimum 1 kg', note: 'Harga kirim sudah termasuk bea masuk dan pajak. Pengantaran area Jakarta gratis. Syarat & ketentuan berlaku.' },
     ],
   },
   {
-    country: 'China', flag: '🇨🇳', minimum: 'Minimum 10 kg', icon: Ship, modes: 'All-in',
+    country: 'China', flag: '🇨🇳', minimum: 'Minimum 10 kg', startingRate: 'Rp 250.000/kg', icon: Ship, modes: 'All-in',
     lanes: [
-      { name: 'Jasa import all-in', leadTime: 'Minimum 10 kg', note: 'Harga kirim sudah termasuk bea masuk dan pajak. Pengantaran area Jakarta gratis.' },
+      { name: 'Jasa import all-in', leadTime: 'Minimum 10 kg', note: 'Harga kirim sudah termasuk bea masuk dan pajak. Pengantaran area Jakarta gratis. Syarat & ketentuan berlaku.' },
     ],
   },
   {
-    country: 'Australia', flag: '🇦🇺', minimum: 'Minimum 1 kg', icon: Plane, modes: 'All-in',
+    country: 'Australia', flag: '🇦🇺', minimum: 'Minimum 1 kg', startingRate: 'AUD 25/kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Jasa import all-in', leadTime: 'Minimum 1 kg', note: 'Harga kirim sudah termasuk bea masuk dan pajak. Pengantaran area Jakarta gratis.' },
+      { name: 'Jasa import all-in', leadTime: 'Minimum 1 kg', note: 'Harga kirim sudah termasuk bea masuk dan pajak. Pengantaran area Jakarta gratis. Syarat & ketentuan berlaku.' },
     ],
   },
   {
-    country: 'Singapore', flag: '🇸🇬', minimum: 'Minimum 10 kg', icon: Plane, modes: 'All-in',
+    country: 'Singapore', flag: '🇸🇬', minimum: 'Minimum 10 kg', startingRate: 'Rp 125.000/kg', icon: Plane, modes: 'All-in',
     lanes: [
-      { name: 'Jasa import all-in', leadTime: 'Minimum 10 kg', note: 'Harga kirim sudah termasuk bea masuk dan pajak. Pengantaran area Jakarta gratis.' },
+      { name: 'Jasa import all-in', leadTime: 'Minimum 10 kg', note: 'Harga kirim sudah termasuk bea masuk dan pajak. Pengantaran area Jakarta gratis. Syarat & ketentuan berlaku.' },
     ],
   },
 ]
@@ -37,7 +37,7 @@ export default function Pricing({ pathname }) {
   const contactHref = isStandalone ? '/#contact' : '#contact'
   const Title = isStandalone ? 'h1' : 'h2'
   const pageTitle = 'Harga Jasa Import ke Indonesia | Shippin Express'
-  const pageDescription = 'Jasa import all-in dari Korea, China, Australia, dan Singapore. Harga kirim termasuk bea masuk dan pajak, gratis pengantaran area Jakarta. Minimum 1 kg atau 10 kg sesuai rute.'
+  const pageDescription = 'Harga import all-in mulai Rp280.000/kg dari Korea, Rp250.000/kg dari China, AUD25/kg dari Australia, dan Rp125.000/kg dari Singapore. Syarat & ketentuan berlaku.'
   const canonicalUrl = 'https://shippinexpress.com/pricing/'
   const pageSchema = { '@context': 'https://schema.org', '@type': 'WebPage', name: pageTitle, description: pageDescription, url: canonicalUrl, about: { '@id': 'https://shippinexpress.com/#organization' } }
 
@@ -101,14 +101,14 @@ export default function Pricing({ pathname }) {
                         <div className="h-8 w-px bg-[#dce8ed]" />
                         <div className="sm:text-right">
                           <div className="text-[9px] font-bold uppercase tracking-[.1em] text-muted">Harga kirim</div>
-                          <div className="mt-0.5 font-display text-sm font-extrabold text-[#16877f]">All-in</div>
+                          <div className="mt-0.5 font-display text-sm font-extrabold text-[#16877f]">{group.startingRate}</div>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
                 <div className="flex items-center justify-between gap-3 border-t border-[#eaf1f3] px-5 py-3.5 sm:px-6">
-                  <span className="text-[11px] leading-5 text-muted">Termasuk bea masuk dan pajak · Jakarta gratis</span>
+                  <span className="text-[11px] leading-5 text-muted">Harga mulai · S&K berlaku</span>
                   <a href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer" className="focus-ring action-mint inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2 font-display text-xs font-extrabold transition">Tanya rute <ArrowRight size={14} /></a>
                 </div>
               </article>
