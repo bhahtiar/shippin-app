@@ -95,11 +95,11 @@ export default function Footer() {
                 Ikuti Kami
               </h4>
               <div className="flex flex-col gap-2">
-                <a href="https://www.instagram.com/shippinexpress/" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-white/55 transition hover:text-brand-yellow">
-                  Instagram <span className="text-white">@shippinexpress</span>
+                <a href="https://www.instagram.com/shippinexpress/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @shippinexpress" className="inline-flex w-fit items-center gap-2.5 text-sm text-white/55 transition hover:text-brand-yellow">
+                  <InstagramMark /> <span>Instagram <b className="font-semibold text-white">@shippinexpress</b></span>
                 </a>
-                <a href="https://www.facebook.com/shippinexpress" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-white/55 transition hover:text-brand-yellow">
-                  Facebook <span className="text-white">@shippinexpress</span>
+                <a href="https://www.facebook.com/shippinexpress" target="_blank" rel="noopener noreferrer" aria-label="Facebook @shippinexpress" className="inline-flex w-fit items-center gap-2.5 text-sm text-white/55 transition hover:text-brand-yellow">
+                  <FacebookMark /> <span>Facebook <b className="font-semibold text-white">@shippinexpress</b></span>
                 </a>
               </div>
             </div>
@@ -134,5 +134,23 @@ function FooterColumn({ title, children }) {
       </h4>
       <div className="flex flex-col gap-3">{children}</div>
     </div>
+  )
+}
+
+function InstagramMark() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5 shrink-0 fill-none stroke-current" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r=".8" className="fill-current stroke-none" />
+    </svg>
+  )
+}
+
+function FacebookMark() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5 shrink-0 fill-current">
+      <path d="M13.6 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5H17V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.5v3.2h2.8V21h3.3Z" />
+    </svg>
   )
 }
