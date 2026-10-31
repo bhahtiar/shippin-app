@@ -90,6 +90,19 @@ export default function Footer() {
               <br />
               Respon dalam 1 x 24 jam
             </p>
+            <div className="mt-5">
+              <h4 className="mb-3 font-display text-[12px] font-bold uppercase tracking-[1px] text-white/70">
+                Ikuti Kami
+              </h4>
+              <div className="flex flex-col gap-2">
+                <a href="https://www.instagram.com/shippinexpress/" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-white/55 transition hover:text-brand-yellow">
+                  Instagram <span className="text-white">@shippinexpress</span>
+                </a>
+                <a href="https://www.facebook.com/shippinexpress" target="_blank" rel="noopener noreferrer" className="w-fit text-sm text-white/55 transition hover:text-brand-yellow">
+                  Facebook <span className="text-white">@shippinexpress</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
