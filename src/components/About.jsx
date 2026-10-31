@@ -4,7 +4,7 @@ import { ClipboardCheck, Handshake, ShieldCheck, Zap } from 'lucide-react'
 const values = [
   { icon: Zap, title: 'Cepat & Efisien', desc: 'Proses dokumen dalam 48 jam. Kami tidak membuat Anda menunggu.' },
   { icon: ShieldCheck, title: 'Aman & Terpercaya', desc: 'Barang Anda ditangani dengan standar keamanan ketat dari pickup hingga tiba.' },
-  { icon: ClipboardCheck, title: 'Customs Expert', desc: 'Tim kami berpengalaman dalam pengurusan bea cukai di berbagai jalur internasional.' },
+  { icon: ClipboardCheck, title: 'Customs Expert', desc: 'Tim kami berpengalaman dalam pengurusan bea masuk dan pajak di berbagai jalur internasional.' },
   { icon: Handshake, title: 'Mitra Jangka Panjang', desc: 'Bukan sekadar jasa kirim. Kami menjadi bagian dari rantai supply chain bisnis Anda.' },
 ]
 

@@ -71,12 +71,12 @@ Mohon informasinya. Terima kasih!`
               Siap membantu kebutuhan impor Anda <span className="heading-highlight">sekarang.</span>
             </h2>
             <p className="mb-10 text-[15px] leading-8 text-muted">
-              Isi form di samping dan kami akan merespons via WhatsApp. Harga kirim sudah termasuk bea cukai, dengan pengantaran gratis untuk area Jakarta.
+              Isi form di samping dan kami akan merespons via WhatsApp. Harga kirim sudah termasuk bea masuk dan pajak, dengan pengantaran gratis untuk area Jakarta.
             </p>
 
             <div className="flex flex-col gap-5">
               <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 815-1123-3838" />
-              <ContactItem icon={Package} label="Layanan" value="Import all-in · bea cukai termasuk" />
+              <ContactItem icon={Package} label="Layanan" value="Import all-in · bea masuk dan pajak termasuk" />
               <ContactItem icon={Globe2} label="Rute impor" value="Korea, China, Australia & Singapore ke Indonesia" />
             </div>
 

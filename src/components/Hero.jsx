@@ -23,7 +23,7 @@ export default function Hero() {
             Barang incaranmu,<br />sampai di <span className="heading-highlight">Indonesia!</span>
           </h1>
           <p className="max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-            Mau belanja atau kulakan dari luar negeri? Kami bantu perjalanan barangmu dari Korea, China, Australia, dan Singapore sampai depan pintu. Harga kirim sudah termasuk bea cukai, dengan pengantaran gratis untuk area Jakarta.
+            Mau belanja atau kulakan dari luar negeri? Kami bantu perjalanan barangmu dari Korea, China, Australia, dan Singapore sampai depan pintu. Harga kirim sudah termasuk bea masuk dan pajak, dengan pengantaran gratis untuk area Jakarta.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#contact" onClick={(event) => handleNav(event, '#contact')} className="focus-ring action-dark inline-flex min-h-12 items-center gap-3 rounded-full px-6 font-display text-sm font-bold shadow-lg shadow-[#153044]/15 transition hover:-translate-y-0.5">
@@ -57,7 +57,7 @@ export default function Hero() {
                 <div className="relative mx-3 h-8 flex-1"><div className="route-dash absolute left-0 right-0 top-1/2 h-2 -translate-y-1/2" /><span className="absolute left-1/2 top-1/2 grid size-8 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#dff7f3] text-[#147f78]"><ArrowUpRight size={16} /></span></div>
                 <div className="text-center"><div className="text-2xl" aria-hidden="true">🇮🇩</div><div className="mt-1 text-[10px] font-bold text-muted">Indonesia</div></div>
               </div>
-              <div className="mt-4 flex items-center gap-3 rounded-2xl bg-[#fff7df] p-3.5"><span className="grid size-10 place-items-center rounded-xl bg-[#ffd166] text-2xl" aria-hidden="true">📦</span><div className="flex-1"><div className="text-xs font-extrabold text-ink">Your goods, handled!</div><div className="mt-0.5 text-[10px] text-muted">Dokumen · Bea cukai · Pengantaran</div></div><span className="text-[#1b9b91]">✓</span></div>
+              <div className="mt-4 flex items-center gap-3 rounded-2xl bg-[#fff7df] p-3.5"><span className="grid size-10 place-items-center rounded-xl bg-[#ffd166] text-2xl" aria-hidden="true">📦</span><div className="flex-1"><div className="text-xs font-extrabold text-ink">Your goods, handled!</div><div className="mt-0.5 text-[10px] text-muted">Dokumen · Bea masuk dan pajak · Pengantaran</div></div><span className="text-[#1b9b91]">✓</span></div>
               <div className="mt-4 flex justify-between px-1 text-[9px] font-bold uppercase tracking-[.1em] text-[#9aaab0]"><span>Shippin Express</span><span>Route 001</span></div>
             </div>
           </div>

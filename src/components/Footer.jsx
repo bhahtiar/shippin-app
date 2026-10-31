@@ -14,7 +14,7 @@ const services = [
   'Import China · minimum 10 kg',
   'Import Australia · minimum 1 kg',
   'Import Singapore · minimum 10 kg',
-  'Bea cukai termasuk · gratis antar area Jakarta',
+  'Bea masuk dan pajak termasuk · gratis antar area Jakarta',
 ]
 
 const routes = ['ID', 'KR', 'CN', 'AU', 'SG']
